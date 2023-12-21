@@ -70,9 +70,6 @@ const CreateDesign = () => {
             <div ref={ref} className="relative w-auto h-auto overflow-auto">
                 <CreateComponent info={obj} currentComponent={undefined} removeComponent={undefined} />
             </div>
-            {/* {
-                loader && <div className='absolute top-0 left-0 flex items-center justify-center w-full h-full bg-black'><RotateLoader color='white' /></div>
-            } */}
         </div>
     )
 }
