@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Link, useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import * as htmlToImage from 'html-to-image';
 import { useState } from "react";
 import { api } from "../../services/Api";
@@ -9,7 +9,6 @@ import { useAppSelector } from "../../hooks/hooks";
 
 const Header = ({ components, design_id }: { components: any, design_id: any }) => {
 
-    const navigate = useNavigate()
     const [loader, setLoader] = useState(false)
     const { access_token } = useAppSelector((state: any) => state.auth)
 

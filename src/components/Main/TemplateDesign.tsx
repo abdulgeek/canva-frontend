@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react'
 import { api } from '../../services/Api'
@@ -36,7 +37,7 @@ const TemplateDesign = ({ type }: { type?: any }) => {
         <>
             <div className={`grid gap-2 ${type ? "grid-cols-2" : 'grid-cols-4 mt-5'}`}>
                 {
-                    templates.map((design, i) => <div onClick={() => add_template(design._id)} className={`relative cursor-pointer group w-full  ${type ? "h-[100px]" : " h-[170px] px-2"}`}>
+                    templates.map((design: any) => <div onClick={() => add_template(design._id)} className={`relative cursor-pointer group w-full  ${type ? "h-[100px]" : " h-[170px] px-2"}`}>
                         <div className={`w-full h-full block bg-[#ffffff12] rounded-md ${type ? '' : 'p-4'}`}>
                             <img className='w-full h-full overflow-hidden rounded-md' src={design.image_url} alt="" />
                         </div>

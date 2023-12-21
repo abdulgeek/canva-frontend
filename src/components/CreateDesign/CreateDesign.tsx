@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import RotateLoader from 'react-spinners/RotateLoader'
 import { useLocation, useNavigate } from 'react-router-dom'
 import * as htmlToImage from 'html-to-image';
 import { useEffect, useRef, useState } from "react";
@@ -10,6 +9,7 @@ import { useAppSelector } from '../../hooks/hooks';
 
 const CreateDesign = () => {
     const [loader, setLoader] = useState(false);
+    console.log(loader)
     const ref = useRef<any>(null)
     const { access_token } = useAppSelector((state: any) => state.auth)
 

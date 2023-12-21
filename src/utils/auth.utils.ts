@@ -56,12 +56,12 @@ class AuthUtils {
 
         try {
             if (token && userId) {
-                _store.dispatch(loaduser(userId));
+                _store.dispatch(loaduser());
             } else {
                 return;
             }
         } catch (error: any) {
-            _store.dispatch(minimalToast(error.message, "error"));
+            minimalToast(error.message, "error")
         }
     }
 }

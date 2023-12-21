@@ -88,6 +88,7 @@ const Main = () => {
 
         const mouseUp = (e: any) => {
             const isMoving = false;
+            console.log(e, isMoving)
             window.removeEventListener('mousemove', mouseMove);
             window.removeEventListener('mouseup', mouseUp);
             setLeft(parseInt(currentDiv.style.left));
@@ -121,6 +122,7 @@ const Main = () => {
 
         const mouseUp = (e: any) => {
             const isMoving = false;
+            console.log(isMoving, e)
             window.removeEventListener('mousemove', mouseMove);
             window.removeEventListener('mouseup', mouseUp);
             setWidth(parseInt(currentDiv.style.width));
@@ -136,6 +138,7 @@ const Main = () => {
         setCurrentComponent(currentInfo)
         const target: any = document.getElementById(id)
         const mouseMove = ({ movementX, movementY }: { movementX: any, movementY: any }) => {
+            console.log(movementY)
             const getStyle = window.getComputedStyle(target)
             const trans = getStyle.transform
             const values: any = trans.split('(')[1].split(')')[0].split(',')
