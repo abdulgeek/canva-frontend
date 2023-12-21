@@ -122,9 +122,9 @@ const authSlice = createSlice({
 		/**
 		 * Handle Auth Register Success
 		 */
-		registerSuccess: (state, { payload }: { payload: { data: any } }) => {
+		registerSuccess: (state) => {
 			state.access_token = null;
-			state.user = payload.data;
+			state.user = null;
 			state.isAuthenticated = false;
 		},
 	},
